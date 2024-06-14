@@ -8,7 +8,14 @@ Items will be placed on the top champion first, and prioritize building items on
 COMP = {
     "Tristana": {
         "board_position": 6,
-        "items": ["GuinsoosRageblade", "InfinityEdge", "LastWhisper"],
+        "items": ["GuinsoosRageblade", "Deathblade", "LastWhisper"],
+        "level": 3,
+        "final_comp": True,
+        "headliner": [False, True, False]
+    },
+    "Neeko": {
+        "board_position": 24,
+        "items": ["WarmogsArmor", "BrambleVest", "DragonsClaw"],
         "level": 3,
         "final_comp": True
     },
@@ -18,17 +25,32 @@ COMP = {
         "level": 3,
         "final_comp": True
     },
-    "Irelia": {
+    "Kennen": {
+        "board_position": 17,
+        "items": ["Evenshroud"],
+        "level": 2,
+        "final_comp": True,
+        "headliner": [False, False, False]
+    },
+    "Ekko": {
+        "board_position": 5,
+        "items": ["ThiefsGloves"],
+        "level": 3,
+        "final_comp": True,
+        "headliner": [False, False, False]
+    },
+    "Bard": {
         "board_position": 0,
-        "items": ["GiantSlayer", "GuinsoosRageblade", "InfinityEdge"],
+        "items": ["JeweledGauntlet","SpearofShojin"],
         "level": 2,
         "final_comp": True
     },
-    "Wukong": {
-        "board_position": 22,
-        "items": ["HandofJustice"],
-        "level": 2,
-        "final_comp": True
+    "KaiSa": {
+        "board_position": 1,
+        "items": ["ThiefsGloves"],
+        "level": 3,
+        "final_comp": True,
+        "headliner": [False, False, False]
     },
     "LeeSin": {
         "board_position": 25,

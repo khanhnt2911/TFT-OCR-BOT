@@ -4,6 +4,7 @@ Functions used by the Arena class to get game data
 
 from difflib import SequenceMatcher
 import threading
+from typing import Optional
 from PIL import ImageGrab
 import numpy as np
 import requests
@@ -118,7 +119,7 @@ def bench_occupied_check() -> list:
     return bench_occupied
 
 
-def valid_item(item: str) -> str | None:
+def valid_item(item: str) -> Optional[str]:
     """Checks if the item passed in arg one is valid"""
     return next(
         (

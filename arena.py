@@ -4,6 +4,7 @@ other variables used by the bot to make decisions
 """
 
 from time import sleep
+from typing import Optional
 import game_assets
 import mk_functions
 import screen_coords
@@ -87,7 +88,7 @@ class Arena:
         sleep(0.5)
         self.fix_bench_state()
 
-    def have_champion(self) -> Champion | None:
+    def have_champion(self) -> Optional[Champion]:
         """Checks the bench to see if champion exists"""
         return next(
             (
@@ -146,7 +147,7 @@ class Arena:
         """Moves champions to the board"""
         self.level: int = arena_functions.get_level()
         while self.level > self.board_size:
-            champion: Champion | None = self.have_champion()
+            champion: Optional[Champion] = self.have_champion()
             if champion is not None:
                 self.move_known(champion)
             elif self.unknown_in_bench():
@@ -182,7 +183,7 @@ class Arena:
 
     def replace_unknown(self) -> None:
         """Replaces unknown champion"""
-        champion: Champion | None = self.have_champion()
+        champion: Optional[Champion] = self.have_champion()
         if len(self.board_unknown) > 0 and champion is not None:
             mk_functions.press_e(
                 screen_coords.BOARD_LOC[
